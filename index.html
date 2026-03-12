@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Negocio</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<h1>Mi Negocio</h1>
+
+<p class="subtitle">Registrar dinero nunca fue tan fácil</p>
+
+</header>
+
+
+<!-- ================= PESTAÑAS ================= -->
+
+<nav class="tabs">
+
+<button class="tab-btn active" data-tab="registrar">Registrar</button>
+<button class="tab-btn" data-tab="dashboard">Resumen</button>
+<button class="tab-btn" data-tab="caja">Caja</button>
+<button class="tab-btn" data-tab="reportes">Reportes</button>
+
+</nav>
+
+
+<!-- ================= REGISTRAR ================= -->
+
+<section class="tab active" id="registrar">
+
+<h2>Registrar movimiento</h2>
+
+<div class="tipo-botones">
+
+<button class="tipo ingreso" data-type="income">💰 Ingreso</button>
+
+<button class="tipo gasto" data-type="expense">💸 Gasto</button>
+
+<button class="tipo compra" data-type="asset">📦 Compra</button>
+
+<button class="tipo prestamo" data-type="loan">🏦 Préstamo</button>
+
+<button class="tipo inversion" data-type="investment">👤 Inversión</button>
+
+</div>
+
+
+<form id="movementForm">
+
+<input type="hidden" id="type">
+
+<div class="campo">
+
+<label>Monto</label>
+
+<input type="number" id="amount" placeholder="Ej: 50">
+
+</div>
+
+<div class="campo">
+
+<label>Concepto</label>
+
+<input type="text" id="concept" placeholder="Ej: Café">
+
+</div>
+
+<div class="campo">
+
+<label>Fecha</label>
+
+<input type="date" id="date">
+
+</div>
+
+<button type="submit" class="guardar">
+
+Guardar movimiento
+
+</button>
+
+</form>
+
+</section>
+
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="tab" id="dashboard">
+
+<h2>Resumen del negocio</h2>
+
+<div class="dashboard">
+
+<div class="card">
+
+<h3>Dinero en caja</h3>
+
+<p id="cash">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Ventas</h3>
+
+<p id="sales">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Gastos</h3>
+
+<p id="expenses">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Ganancia</h3>
+
+<p id="profit">0</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CAJA ================= -->
+
+<section class="tab" id="caja">
+
+<h2>Registro de caja</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fecha</th>
+<th>Tipo</th>
+<th>Concepto</th>
+<th>Monto</th>
+<th>Saldo</th>
+
+</tr>
+
+</thead>
+
+<tbody id="movementTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================= REPORTES ================= -->
+
+<section class="tab" id="reportes">
+
+<h2>Descargar reportes</h2>
+
+<div class="report-buttons">
+
+<button id="downloadCaja">
+
+Descargar Caja
+
+</button>
+
+<button id="downloadPL">
+
+Descargar Pérdidas y Ganancias
+
+</button>
+
+<button id="downloadBalance">
+
+Descargar Balance
+
+</button>
+
+<button id="downloadFlujo">
+
+Descargar Flujo de Caja
+
+</button>
+
+</div>
+
+
+<div class="mini-reportes">
+
+<div class="mini-card">
+
+<h3>Ingresos</h3>
+
+<p id="plIncome">0</p>
+
+</div>
+
+<div class="mini-card">
+
+<h3>Gastos</h3>
+
+<p id="plExpenses">0</p>
+
+</div>
+
+<div class="mini-card">
+
+<h3>Resultado</h3>
+
+<p id="plResult">0</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+</body>
+
+</html>
+
